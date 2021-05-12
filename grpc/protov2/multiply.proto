@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "multiply/grpc/proto";
+package proto.multiply.v2;
+
+message Request {
+    float x = 1;
+    float y = 2;
+}
+
+message Response {
+    float data = 1;
+    string error = 2;
+}
+
+service MultiplyService {
+    rpc Multiply(Request) returns (Response);
+}
