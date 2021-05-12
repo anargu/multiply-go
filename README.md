@@ -2,6 +2,14 @@
 
 A GRPC & API Rest service to provide a single operation: multiplication of 2 numbers
 
+## Notes
+
+Decided the scope to be float64. As GRPC deals with float64.
+Containerized: Docker
+CI/CD: Github Actions
+Telemetry: Promotheus/OpenTelemetry
+BigNumbers??? BigNumbers can solve issues on operations with extremely big numbers at a cost of increasing computing space,time
+
 ## What this service does?
 
 Multiply 2 numbers. The number values ranges all IEEE-754 32-bit floating-point numbers (about 7 decimal digits, and a max value of 3.40282346638528859811704183484516925440e38).
