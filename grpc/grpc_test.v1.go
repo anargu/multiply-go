@@ -3,7 +3,7 @@ package grpcsvc
 import (
 	"context"
 	"log"
-	"multiply/grpc/proto"
+	proto "multiply/grpc/protov1"
 	"net"
 	"testing"
 
@@ -21,7 +21,7 @@ var (
 func init() {
 	lis = bufconn.Listen(bufSize)
 	srv := grpc.NewServer()
-	proto.RegisterMultiplyServiceServer(srv, MultiplyGrpcSrv)
+	proto.RegisterMultiplyServiceServer(srv, MultiplyGrpcSrvV1)
 	go func() {
 		if err := srv.Serve(lis); err != nil {
 			log.Fatalf("Server exited with error: %v", err)

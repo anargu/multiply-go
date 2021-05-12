@@ -2,7 +2,7 @@ package grpcsvc
 
 import (
 	"context"
-	"multiply/grpc/proto"
+	proto "multiply/grpc/protov1"
 
 	"google.golang.org/grpc"
 )

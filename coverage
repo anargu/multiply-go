@@ -1,7 +1,4 @@
 mode: set
-multiply/utils.go:3.41,4.16 1 1
-multiply/utils.go:7.2,8.13 2 1
-multiply/utils.go:4.16,6.3 1 1
 multiply/multiply.go:8.39,10.14 1 1
 multiply/multiply.go:14.2,14.32 1 1
 multiply/multiply.go:17.2,17.12 1 1
@@ -10,7 +7,9 @@ multiply/multiply.go:14.32,16.3 1 1
 multiply/multiply.go:20.57,23.16 3 1
 multiply/multiply.go:27.2,27.16 1 1
 multiply/multiply.go:23.16,25.3 1 1
-multiply/rest/server.go:9.29,13.2 3 0
+multiply/utils.go:3.41,4.16 1 1
+multiply/utils.go:7.2,8.13 2 1
+multiply/utils.go:4.16,6.3 1 1
 multiply/rest/v1.go:17.65,20.30 3 1
 multiply/rest/v1.go:23.2,24.16 2 1
 multiply/rest/v1.go:27.2,28.16 2 1
@@ -23,10 +22,4 @@ multiply/rest/v1.go:50.2,56.16 3 1
 multiply/rest/v1.go:60.2,60.37 1 1
 multiply/rest/v1.go:41.16,49.3 4 1
 multiply/rest/v1.go:56.16,58.3 1 1
-multiply/grpc/client.go:10.68,13.2 2 1
-multiply/grpc/client.go:15.100,21.16 3 1
-multiply/grpc/client.go:24.2,24.23 1 1
-multiply/grpc/client.go:21.16,23.3 1 1
-multiply/grpc/server.go:13.99,16.16 3 1
-multiply/grpc/server.go:20.2,20.39 1 1
-multiply/grpc/server.go:16.16,18.3 1 0
+multiply/rest/server.go:9.29,13.2 3 0

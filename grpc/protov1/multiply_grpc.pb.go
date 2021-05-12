@@ -31,7 +31,7 @@ func NewMultiplyServiceClient(cc grpc.ClientConnInterface) MultiplyServiceClient
 
 func (c *multiplyServiceClient) Multiply(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Result, error) {
 	out := new(Result)
-	err := c.cc.Invoke(ctx, "/proto.MultiplyService/Multiply", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.multiply.v1.MultiplyService/Multiply", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -76,7 +76,7 @@ func _MultiplyService_Multiply_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.MultiplyService/Multiply",
+		FullMethod: "/proto.multiply.v1.MultiplyService/Multiply",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MultiplyServiceServer).Multiply(ctx, req.(*Request))
@@ -88,7 +88,7 @@ func _MultiplyService_Multiply_Handler(srv interface{}, ctx context.Context, dec
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var MultiplyService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "proto.MultiplyService",
+	ServiceName: "proto.multiply.v1.MultiplyService",
 	HandlerType: (*MultiplyServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -97,5 +97,5 @@ var MultiplyService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "multiply.proto",
+	Metadata: "grpc/protov1/multiply.proto",
 }

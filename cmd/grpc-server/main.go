@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"log"
 	grpcsvc "multiply/grpc"
-	"multiply/grpc/proto"
 	"net"
 
 	"google.golang.org/grpc"
@@ -24,8 +23,8 @@ func RunServer(host string, port string) {
 		log.Fatalln(err)
 	}
 	srv := grpc.NewServer()
-	proto.RegisterMultiplyServiceServer(srv, grpcsvc.MultiplyGrpcSrv)
-	// reflection.Register(srv)
+
+	grpcsvc.RegisterGrpcServer(srv)
 
 	log.Fatal(srv.Serve(listener))
 }
