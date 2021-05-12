@@ -16,3 +16,8 @@
 
 .vscode
 
+# builds
+grpc-client
+grpc-server
+rest-server
+
