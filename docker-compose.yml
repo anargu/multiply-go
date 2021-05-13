@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  multiply-rest:
+    build:
+        context: .
+        dockerfile: Dockerfile.rest
+    ports:
+      - "11000:11000"
+  multiply-grpc:
+    build:
+        context: .
+        dockerfile: Dockerfile.grpc
+    ports:
+      - "12000:12000"

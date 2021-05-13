@@ -21,6 +21,5 @@ grpc-client
 grpc-server
 rest-server
 
-*docker*
 
 .DS_Store

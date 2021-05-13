@@ -9,6 +9,7 @@ Another option would be using the go package big (Big Numbers) which wraps very 
 Because of these reasons, for this escenario, I opted for float32 value type as a good choice for this implementation considering the use of values won't be extra large numbers (exceeding float32).   
 
 CI/CD: Github Actions (✔️)
+Containerized (✔️)
 
 ## What this service does?
 
@@ -48,6 +49,8 @@ Further details of GRPC API are located on docs folder
 
 
 ## Rest
+
+REST API service. Is not limited to a specific METHOD (So is possible to use on any request Method: GET, POST, PUT, etc etc)
 
 ### How to Use
 

@@ -1,0 +1,16 @@
+FROM golang:1.16 AS build
+
+WORKDIR /multiply
+COPY . ./
+
+RUN go mod tidy
+
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./grpc-server ./cmd/grpc-server/main.go
+
+# optimizing space. builds are gonna paste on a clean image 
+FROM scratch
+
+# copying binary
+COPY --from=build /multiply/grpc-server /bin/
+
+ENTRYPOINT ["/bin/grpc-server"]
