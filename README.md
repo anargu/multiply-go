@@ -68,6 +68,9 @@ In other terminal, run this command to make a call to the rest service:
 
         curl -X GET "http://localhost:11000/v1/multiply?x=23&y=4343"
 
+## Test Coverage
+
+test coveraged reached to avg 92.9% (run testcoverage.sh). cmd package were excepted from test as the main as the code implemented are general. all tests afford business logic and grpc & rest implementations
 
 ## TODO
 
